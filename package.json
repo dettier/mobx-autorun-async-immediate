@@ -1,0 +1,47 @@
+{
+  "name": "autorun-async-immediate",
+  "version": "0.0.0",
+  "description": "Mobx autorun debounced function with immediate = true behaviour",
+  "homepage": "",
+  "author": {
+    "name": "dettier",
+    "email": "sergey.tychinin@gmail.com",
+    "url": ""
+  },
+  "files": [
+    "lib"
+  ],
+  "main": "lib/index.js",
+  "keywords": [
+    "mobx",
+    "autorun",
+    "async",
+    "debounce",
+    "throttle"
+  ],
+  "devDependencies": {
+    "eslint": "^2.1.0",
+    "eslint-config-xo-space": "^0.13.0",
+    "gulp": "^3.9.0",
+    "gulp-eslint": "^2.0.0",
+    "gulp-exclude-gitignore": "^1.0.0",
+    "gulp-line-ending-corrector": "^1.0.1",
+    "gulp-istanbul": "^0.10.3",
+    "gulp-mocha": "^2.0.0",
+    "gulp-plumber": "^1.0.0",
+    "gulp-nsp": "^2.1.0",
+    "gulp-coveralls": "^0.1.0"
+  },
+  "eslintConfig": {
+    "extends": "xo-space",
+    "env": {
+      "mocha": true
+    }
+  },
+  "repository": "dettier/autorun-async-immediate",
+  "scripts": {
+    "prepublish": "gulp prepublish",
+    "test": "gulp"
+  },
+  "license": "MIT"
+}
