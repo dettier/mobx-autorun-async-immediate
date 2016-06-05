@@ -1,4 +1,4 @@
-# autorun-async-immediate [![NPM version][npm-image]][npm-url] [![Build Status][travis-image]][travis-url] [![Dependency Status][daviddm-image]][daviddm-url] [![Coverage percentage][coveralls-image]][coveralls-url]
+# mobx-autorun-async-immediate [![NPM version][npm-image]][npm-url] [![Build Status][travis-image]][travis-url] [![Dependency Status][daviddm-image]][daviddm-url] [![Coverage percentage][coveralls-image]][coveralls-url]
 > Mobx debounced autorun function with immediate = true behaviour
 
 ## Installation
@@ -10,9 +10,13 @@ $ npm install --save mobx-autorun-async-immediate
 ## Usage
 
 ```js
-var autorunAsyncImmediate = require('autorun-async-immediate');
+const autorunAsyncImmediate = require('mobx-autorun-async-immediate');
+const scope = {};
+const delay = 100;
 
-autorunAsyncImmediate('Rainbow');
+autorunAsyncImmediate(() => {
+  // fetch data from server
+}, delay, scope);
 ```
 ## License
 
