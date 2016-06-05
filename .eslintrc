@@ -1,0 +1,14 @@
+{
+  "extends": "airbnb-base/legacy",
+  "rules": {
+    "func-names": 0,
+    "no-param-reassign": 0,
+    "curly": [0, "multi-line"],
+    "padded-blocks": [0, "never"],
+    "space-before-function-paren": [2, "always"],
+    "spaced-comment": ["error", "always", { "exceptions": ["/"] }]
+  },
+  "env": {
+    "mocha": true
+  }
+}
