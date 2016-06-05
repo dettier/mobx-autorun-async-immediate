@@ -1,6 +1,6 @@
 {
   "name": "mobx-autorun-async-immediate",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "description": "Mobx debounced autorun function with immediate = true behaviour",
   "homepage": "",
   "author": {
