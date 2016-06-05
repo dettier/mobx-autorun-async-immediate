@@ -31,14 +31,14 @@ describe('autorun-async-immediate', function () {
     autorunAsyncImmediate(function () {
       obs.get(); // register obs dependency
       callCount++;
-    }, 30);
+    }, 200);
 
     function increaseObs () {
       obs.set(obs.get() + 1);
     }
 
     // change observable value 3 times during 30ms, but the
-    // handler should be invoked only once after additional 30ms
+    // handler should be invoked only once after additional 200ms
     setTimeout(increaseObs, 10);
     setTimeout(increaseObs, 20);
     setTimeout(increaseObs, 30);
@@ -50,7 +50,7 @@ describe('autorun-async-immediate', function () {
       } catch (e) {
         done(e);
       }
-    }, 200);
+    }, 500);
 
   });
 
