@@ -50,7 +50,7 @@ describe('autorun-async-immediate', function () {
       } catch (e) {
         done(e);
       }
-    }, 500);
+    }, 1000);
 
   });
 
