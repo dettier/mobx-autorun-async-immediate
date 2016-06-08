@@ -28,8 +28,10 @@ describe('autorun-async-immediate', function () {
 
     var callCount = 0;
     var obs = observable(0);
+    var obsValues = [];
+
     autorunAsyncImmediate(function () {
-      obs.get(); // register obs dependency
+      obsValues.push(obs.get()); // register obs dependency
       callCount++;
     }, 200);
 
@@ -37,15 +39,22 @@ describe('autorun-async-immediate', function () {
       obs.set(obs.get() + 1);
     }
 
-    // change observable value 3 times during 30ms, but the
+    // change observable value 3 times during 300ms, but the
     // handler should be invoked only once after additional 200ms
     setTimeout(increaseObs, 10);
     setTimeout(increaseObs, 20);
     setTimeout(increaseObs, 30);
 
+    // next "debounce" window - this should
+    // be 1 additional handler invocation
+    setTimeout(increaseObs, 400);
+    setTimeout(increaseObs, 410);
+    setTimeout(increaseObs, 420);
+
     setTimeout(function () {
       try {
-        assert.equal(callCount, 2, 'should call autorun handler twice');
+        assert.equal(callCount, 3, 'should call autorun handler 3 times');
+        assert.deepEqual(obsValues, [0, 3, 6]);
         done();
       } catch (e) {
         done(e);

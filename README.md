@@ -1,5 +1,5 @@
 # mobx-autorun-async-immediate [![NPM version][npm-image]][npm-url] [![Build Status][travis-image]][travis-url] [![Dependency Status][daviddm-image]][daviddm-url] [![Coverage percentage][coveralls-image]][coveralls-url]
-> Mobx debounced autorun function with immediate = true behaviour
+> Mobx debounced autorun function with immediate synchronous first call
 
 ## Why use this?
 

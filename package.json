@@ -1,7 +1,7 @@
 {
   "name": "mobx-autorun-async-immediate",
   "version": "1.0.0",
-  "description": "Mobx debounced autorun function with immediate = true behaviour",
+  "description": "Mobx debounced autorun function with immediate synchronous first call",
   "homepage": "",
   "author": {
     "name": "dettier"
@@ -15,7 +15,8 @@
     "autorun",
     "async",
     "debounce",
-    "throttle"
+    "throttle",
+    "computed"
   ],
   "devDependencies": {
     "chai": "^3.5.0",
