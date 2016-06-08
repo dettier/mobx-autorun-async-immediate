@@ -3,7 +3,7 @@
 
 ## Why use this?
 
-If you need to run some heavy action (such as data fetching from server) when your observables change you usually want to debounce your action. But you probably need the first run of your action to be synchronous (so the first fetching starts right away).
+If you need to run some heavy action (such as data fetching from server) when your observables change, you usually want to debounce your action. But you probably need the first run of your action to be synchronous (so the first fetching starts right away).
 
 ### Why not use autorunAsync?
 Mobx has autorunAsync, but it may not suit you for the following reasons:
