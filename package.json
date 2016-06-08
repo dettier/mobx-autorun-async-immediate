@@ -31,7 +31,8 @@
     "gulp-line-ending-corrector": "^1.0.1",
     "gulp-mocha": "^2.0.0",
     "gulp-nsp": "^2.1.0",
-    "gulp-plumber": "^1.0.0"
+    "gulp-plumber": "^1.0.0",
+    "mobx": "^2.2.0"
   },
   "repository": "dettier/mobx-autorun-async-immediate",
   "scripts": {
@@ -39,8 +40,10 @@
     "test": "gulp"
   },
   "license": "MIT",
-  "dependencies": {
-    "lodash.debounce": "^4.0.0",
+  "peerDependencies": {
     "mobx": "^2.2.0"
+  },
+  "dependencies": {
+    "lodash.debounce": "^4.0.0"
   }
 }
